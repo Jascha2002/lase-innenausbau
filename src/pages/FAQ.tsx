@@ -1,0 +1,66 @@
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
+
+const faqs = [
+  {
+    q: "Welche Leistungen bieten Sie an?",
+    a: "Wir bieten Fußbodenverlegung, Decken abhängen, Trockenbau, Wände streichen und Fliesenlegen an – alles aus einer Hand.",
+  },
+  {
+    q: "In welchem Gebiet sind Sie tätig?",
+    a: "Unser Hauptgebiet ist Gera und Umgebung in Thüringen. Je nach Projektgröße sind wir auch überregional verfügbar.",
+  },
+  {
+    q: "Wie läuft eine Zusammenarbeit ab?",
+    a: "Nach Ihrer Kontaktaufnahme vereinbaren wir einen Vor-Ort-Termin, erstellen ein unverbindliches Angebot und starten nach Auftragserteilung zeitnah mit der Ausführung.",
+  },
+  {
+    q: "Erstellen Sie kostenlose Kostenvoranschläge?",
+    a: "Ja, wir erstellen Ihnen gerne einen unverbindlichen Kostenvoranschlag nach einer Besichtigung vor Ort.",
+  },
+  {
+    q: "Wie lange dauert ein typisches Projekt?",
+    a: "Die Dauer hängt vom Umfang ab. Ein einzelnes Zimmer ist oft in 1-3 Tagen fertig, größere Projekte besprechen wir im Detail beim Vor-Ort-Termin.",
+  },
+  {
+    q: "Arbeiten Sie auch am Wochenende?",
+    a: "In Ausnahmefällen und nach Absprache sind auch Wochenendarbeiten möglich. Sprechen Sie uns einfach an.",
+  },
+  {
+    q: "Welche Materialien verwenden Sie?",
+    a: "Wir verwenden ausschließlich hochwertige Markenprodukte. Gerne beraten wir Sie bei der Materialauswahl passend zu Ihrem Budget und Stil.",
+  },
+];
+
+const FAQ = () => {
+  return (
+    <>
+      <section className="bg-primary py-20 text-primary-foreground">
+        <div className="container">
+          <h1 className="font-display text-5xl sm:text-6xl">Häufige Fragen</h1>
+          <p className="mt-4 max-w-xl text-primary-foreground/70">
+            Antworten auf die wichtigsten Fragen rund um unsere Leistungen.
+          </p>
+        </div>
+      </section>
+
+      <section className="py-20">
+        <div className="container mx-auto max-w-3xl">
+          <Accordion type="single" collapsible className="space-y-3">
+            {faqs.map((faq, i) => (
+              <AccordionItem key={i} value={`faq-${i}`} className="rounded-lg border bg-card px-6">
+                <AccordionTrigger className="text-left font-medium hover:no-underline">
+                  {faq.q}
+                </AccordionTrigger>
+                <AccordionContent className="text-muted-foreground">
+                  {faq.a}
+                </AccordionContent>
+              </AccordionItem>
+            ))}
+          </Accordion>
+        </div>
+      </section>
+    </>
+  );
+};
+
+export default FAQ;
