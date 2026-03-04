@@ -24,7 +24,7 @@ const Datenschutz = () => {
             Cubaer Straße 7<br />
             07548 Gera<br />
             Telefon: 0174-9801534<br />
-            E-Mail: larsseidler.info@gmail.com
+            E-Mail: lase.innenausbau@gmail.com
           </p>
 
           <h2 className="font-display text-2xl mt-8">3. Datenerfassung auf dieser Website</h2>
