@@ -3,42 +3,49 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Info } from "lucide-react";
 
+import imgDachgeschoss from "@/assets/ref-dachgeschoss.jpg";
+import imgBad from "@/assets/ref-bad.jpg";
+import imgBuero from "@/assets/ref-buero.jpg";
+import imgAltbau from "@/assets/ref-altbau.jpg";
+import imgPraxis from "@/assets/ref-praxis.jpg";
+import imgLaden from "@/assets/ref-laden.jpg";
+
 const projects = [
   {
     title: "Dachgeschossausbau in Gera-Untermhaus",
     category: "Trockenbau",
     desc: "Kompletter Ausbau eines 80m² Dachgeschosses mit Trockenbau, Dämmung und Wandgestaltung.",
-    image: "/placeholder.svg",
+    image: imgDachgeschoss,
   },
   {
     title: "Badezimmer-Sanierung Privathaushalt",
     category: "Fliesenlegen",
     desc: "Komplettsanierung eines Familienbads inklusive Abdichtung, großformatiger Fliesen und bodengleicher Dusche.",
-    image: "/placeholder.svg",
+    image: imgBad,
   },
   {
     title: "Büroräume Gera Zentrum",
     category: "Fußbodenverlegung",
     desc: "Verlegung von 200m² Designvinyl in modernen Büroräumen inkl. Sockelleisten und Übergangsprofilen.",
-    image: "/placeholder.svg",
+    image: imgBuero,
   },
   {
     title: "Wohnungsrenovierung Altbau",
     category: "Wände streichen",
     desc: "Farbgestaltung und Anstrich einer 3-Zimmer-Altbauwohnung mit hochwertigen Innenfarben.",
-    image: "/placeholder.svg",
+    image: imgAltbau,
   },
   {
     title: "Praxisräume Deckengestaltung",
     category: "Decken abhängen",
     desc: "Abgehängte Akustikdecke mit integrierter LED-Beleuchtung für eine Arztpraxis.",
-    image: "/placeholder.svg",
+    image: imgPraxis,
   },
   {
     title: "Ladenlokal Umbau",
     category: "Trockenbau",
     desc: "Raumteilung und Wandverkleidung für ein neues Ladenlokal in der Geraer Innenstadt.",
-    image: "/placeholder.svg",
+    image: imgLaden,
   },
 ];
 
@@ -66,8 +73,8 @@ const Referenzen = () => {
                 transition={{ duration: 0.5, delay: i * 0.1 }}
               >
                 <Card className="h-full overflow-hidden border-none shadow-md transition-all hover:shadow-xl hover:-translate-y-1">
-                  <div className="aspect-video bg-muted">
-                    <img src={p.image} alt={p.title} className="h-full w-full object-cover" />
+                  <div className="aspect-video overflow-hidden bg-muted">
+                    <img src={p.image} alt={p.title} className="h-full w-full object-cover transition-transform duration-500 hover:scale-105" loading="lazy" />
                   </div>
                   <CardContent className="p-5">
                     <Badge className="mb-2 bg-accent/10 text-accent hover:bg-accent/20">{p.category}</Badge>
@@ -79,7 +86,6 @@ const Referenzen = () => {
             ))}
           </div>
 
-          {/* Admin Panel Teaser */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}

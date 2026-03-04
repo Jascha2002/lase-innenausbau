@@ -1,31 +1,42 @@
 import { motion } from "framer-motion";
 import { Layers, ArrowDown, Hammer, PaintBucket, Grid3X3 } from "lucide-react";
 
+import imgFussboden from "@/assets/leistungen-fussboden.jpg";
+import imgDecken from "@/assets/leistungen-decken.jpg";
+import imgTrockenbau from "@/assets/leistungen-trockenbau.jpg";
+import imgStreichen from "@/assets/leistungen-streichen.jpg";
+import imgFliesen from "@/assets/leistungen-fliesen.jpg";
+
 const services = [
   {
     icon: Layers,
     title: "Fußbodenverlegung",
     desc: "Ob Parkett, Laminat, Vinyl oder Designbelag – wir verlegen Ihren Boden fachgerecht und passgenau. Inklusive Untergrundvorbereitung, Dämmung und sauberer Abschlüsse.",
+    image: imgFussboden,
   },
   {
     icon: ArrowDown,
     title: "Decken abhängen",
     desc: "Abgehängte Decken für bessere Raumakustik, integrierte Beleuchtung oder einfach ein moderneres Erscheinungsbild. Wir arbeiten mit Gipskarton- und Akustikdeckensystemen.",
+    image: imgDecken,
   },
   {
     icon: Hammer,
     title: "Trockenbau",
     desc: "Raumteiler, Vorwandinstallationen, Dachgeschossausbau – Trockenbau ist unser Kerngeschäft. Schnell, sauber und vielseitig einsetzbar für jeden Grundriss.",
+    image: imgTrockenbau,
   },
   {
     icon: PaintBucket,
     title: "Wände streichen",
     desc: "Von der einfachen Renovierung bis zur kreativen Farbgestaltung. Wir streichen Ihre Wände professionell mit hochwertigen Farben und sorgfältiger Vorbereitung.",
+    image: imgStreichen,
   },
   {
     icon: Grid3X3,
     title: "Fliesenlegen",
     desc: "Fliesen für Bad, Küche, Flur oder Terrasse. Wir verlegen Wand- und Bodenfliesen in allen Formaten – inklusive Abdichtung und Fugentechnik.",
+    image: imgFliesen,
   },
 ];
 
@@ -52,10 +63,18 @@ const Leistungen = () => {
               transition={{ duration: 0.6, delay: i * 0.1 }}
               className={`flex flex-col gap-8 md:flex-row md:items-center ${i % 2 !== 0 ? "md:flex-row-reverse" : ""}`}
             >
-              <div className="flex h-32 w-32 shrink-0 items-center justify-center rounded-2xl bg-accent/10 text-accent mx-auto md:mx-0">
-                <s.icon className="h-16 w-16" />
+              <div className="shrink-0 overflow-hidden rounded-2xl md:w-1/2">
+                <img
+                  src={s.image}
+                  alt={s.title}
+                  className="aspect-video w-full object-cover transition-transform duration-500 hover:scale-105"
+                  loading="lazy"
+                />
               </div>
-              <div className="text-center md:text-left">
+              <div className="text-center md:text-left md:w-1/2">
+                <div className="mb-4 inline-flex h-14 w-14 items-center justify-center rounded-xl bg-accent/10 text-accent">
+                  <s.icon className="h-7 w-7" />
+                </div>
                 <h2 className="font-display text-3xl">{s.title}</h2>
                 <p className="mt-3 text-muted-foreground leading-relaxed">{s.desc}</p>
               </div>
