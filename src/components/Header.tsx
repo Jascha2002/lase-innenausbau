@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Menu, X, Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import ThemeToggle from "./ThemeToggle";
 
 const navLinks = [
   { to: "/", label: "Startseite" },
@@ -37,8 +38,9 @@ const Header = () => {
               {link.label}
             </Link>
           ))}
+          <ThemeToggle />
           <Link to="/kontakt">
-            <Button className="ml-4 bg-accent text-accent-foreground hover:bg-accent/90">
+            <Button className="ml-2 bg-accent text-accent-foreground hover:bg-accent/90">
               <Phone className="mr-2 h-4 w-4" />
               Kontakt
             </Button>
