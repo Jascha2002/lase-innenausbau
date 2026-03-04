@@ -92,7 +92,7 @@ const Kontakt = () => {
                     </div>
                     <div className="flex items-center gap-3">
                       <Mail className="h-5 w-5 text-accent" />
-                      <a href="mailto:larsseidler.info@gmail.com" className="hover:text-accent">larsseidler.info@gmail.com</a>
+                      <a href="mailto:lase.innenausbau@gmail.com" className="hover:text-accent">lase.innenausbau@gmail.com</a>
                     </div>
                   </div>
                 </CardContent>

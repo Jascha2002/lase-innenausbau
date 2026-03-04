@@ -20,7 +20,7 @@ const Impressum = () => {
           <h2 className="font-display text-2xl mt-8">Kontakt</h2>
           <p>
             Telefon: 0174-9801534<br />
-            E-Mail: larsseidler.info@gmail.com
+            E-Mail: lase.innenausbau@gmail.com
           </p>
 
           <h2 className="font-display text-2xl mt-8">Umsatzsteuer-ID</h2>
