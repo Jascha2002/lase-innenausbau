@@ -3,7 +3,7 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/
 const faqs = [
   {
     q: "Welche Leistungen bieten Sie an?",
-    a: "Wir bieten Fußbodenverlegung, Decken abhängen, Trockenbau, Wände streichen und Fliesenlegen an – alles aus einer Hand.",
+    a: "Unsere Kernleistungen umfassen Fußbodenverlegung, Decken abhängen und Trockenbau. Darüber hinaus prüfen wir gerne, ob wir auch weitere Innenausbau-Projekte für Sie umsetzen können – fragen Sie uns einfach an.",
   },
   {
     q: "In welchem Gebiet sind Sie tätig?",
@@ -28,6 +28,10 @@ const faqs = [
   {
     q: "Welche Materialien verwenden Sie?",
     a: "Wir verwenden ausschließlich hochwertige Markenprodukte. Gerne beraten wir Sie bei der Materialauswahl passend zu Ihrem Budget und Stil.",
+  },
+  {
+    q: "Kann ich auch Leistungen anfragen, die nicht auf der Website stehen?",
+    a: "Selbstverständlich! Senden Sie uns einfach Ihre Anfrage über das Kontaktformular. Wir prüfen, ob eine Umsetzung durch unser Unternehmen möglich ist und melden uns bei Ihnen.",
   },
 ];
 

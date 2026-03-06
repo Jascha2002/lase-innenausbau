@@ -7,8 +7,22 @@ import { Label } from "@/components/ui/label";
 import { Card, CardContent } from "@/components/ui/card";
 import { Phone, Mail, MapPin, Send, CheckCircle } from "lucide-react";
 
+const leistungsOptionen = [
+  "Fußbodenverlegung",
+  "Decken abhängen",
+  "Trockenbau",
+  "Sonstiges / Andere Leistung",
+];
+
 const Kontakt = () => {
   const [sent, setSent] = useState(false);
+  const [selectedServices, setSelectedServices] = useState<string[]>([]);
+
+  const toggleService = (service: string) => {
+    setSelectedServices((prev) =>
+      prev.includes(service) ? prev.filter((s) => s !== service) : [...prev, service]
+    );
+  };
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -19,9 +33,9 @@ const Kontakt = () => {
     <>
       <section className="bg-primary py-20 text-primary-foreground">
         <div className="container">
-          <h1 className="font-display text-5xl sm:text-6xl">Kontakt</h1>
+          <h1 className="font-display text-5xl sm:text-6xl">Anfrage stellen</h1>
           <p className="mt-4 max-w-xl text-primary-foreground/70">
-            Sprechen Sie uns an – wir freuen uns auf Ihr Projekt.
+            Beschreiben Sie Ihr Vorhaben – wir prüfen, ob eine Umsetzung durch unser Unternehmen möglich ist und melden uns zeitnah bei Ihnen.
           </p>
         </div>
       </section>
@@ -40,7 +54,7 @@ const Kontakt = () => {
                   <CheckCircle className="mb-4 h-12 w-12 text-accent" />
                   <h2 className="font-display text-3xl">Vielen Dank!</h2>
                   <p className="mt-2 text-muted-foreground">
-                    Ihre Nachricht wurde gesendet. Wir melden uns in Kürze bei Ihnen.
+                    Ihre Anfrage wurde gesendet. Wir prüfen Ihr Vorhaben und melden uns in Kürze bei Ihnen.
                   </p>
                 </div>
               ) : (
@@ -59,13 +73,61 @@ const Kontakt = () => {
                     <Label htmlFor="email">E-Mail *</Label>
                     <Input id="email" type="email" required placeholder="ihre@email.de" />
                   </div>
+
+                  {/* Service selection */}
                   <div className="space-y-2">
-                    <Label htmlFor="message">Nachricht *</Label>
-                    <Textarea id="message" required rows={5} placeholder="Beschreiben Sie Ihr Projekt..." />
+                    <Label>Gewünschte Leistung(en) *</Label>
+                    <div className="flex flex-wrap gap-2">
+                      {leistungsOptionen.map((opt) => (
+                        <button
+                          key={opt}
+                          type="button"
+                          onClick={() => toggleService(opt)}
+                          className={`rounded-full border px-4 py-2 text-sm font-medium transition-colors ${
+                            selectedServices.includes(opt)
+                              ? "border-accent bg-accent text-accent-foreground"
+                              : "border-border bg-secondary text-foreground hover:border-accent/50"
+                          }`}
+                        >
+                          {opt}
+                        </button>
+                      ))}
+                    </div>
                   </div>
+
+                  <div className="grid gap-5 sm:grid-cols-2">
+                    <div className="space-y-2">
+                      <Label htmlFor="ort">Ort / Stadtteil</Label>
+                      <Input id="ort" placeholder="z.B. Gera-Untermhaus" />
+                    </div>
+                    <div className="space-y-2">
+                      <Label htmlFor="flaeche">Ungefähre Fläche (m²)</Label>
+                      <Input id="flaeche" type="text" placeholder="z.B. 50" />
+                    </div>
+                  </div>
+
+                  <div className="space-y-2">
+                    <Label htmlFor="zeitraum">Gewünschter Zeitraum</Label>
+                    <Input id="zeitraum" placeholder="z.B. ab März 2026, flexibel" />
+                  </div>
+
+                  <div className="space-y-2">
+                    <Label htmlFor="message">Projektbeschreibung *</Label>
+                    <Textarea
+                      id="message"
+                      required
+                      rows={5}
+                      placeholder="Beschreiben Sie Ihr Vorhaben möglichst genau: Was soll gemacht werden? Gibt es Besonderheiten?"
+                    />
+                  </div>
+
+                  <p className="text-xs text-muted-foreground">
+                    * Pflichtfelder. Ihre Anfrage ist unverbindlich. Wir prüfen, ob eine Umsetzung durch unser Unternehmen möglich ist.
+                  </p>
+
                   <Button type="submit" className="bg-accent text-accent-foreground hover:bg-accent/90">
                     <Send className="mr-2 h-4 w-4" />
-                    Nachricht senden
+                    Anfrage absenden
                   </Button>
                 </form>
               )}
@@ -95,6 +157,18 @@ const Kontakt = () => {
                       <a href="mailto:lase.innenausbau@gmail.com" className="hover:text-accent">lase.innenausbau@gmail.com</a>
                     </div>
                   </div>
+                </CardContent>
+              </Card>
+
+              <Card className="border-none bg-secondary">
+                <CardContent className="p-6 space-y-3">
+                  <h2 className="font-display text-2xl">So geht's weiter</h2>
+                  <ol className="list-decimal list-inside space-y-2 text-sm text-muted-foreground">
+                    <li>Sie senden uns Ihre Anfrage über das Formular.</li>
+                    <li>Wir prüfen Ihr Vorhaben und melden uns bei Ihnen.</li>
+                    <li>Bei Interesse vereinbaren wir einen Vor-Ort-Termin.</li>
+                    <li>Sie erhalten ein unverbindliches Angebot.</li>
+                  </ol>
                 </CardContent>
               </Card>
 

@@ -4,9 +4,7 @@ import { Badge } from "@/components/ui/badge";
 import { Info } from "lucide-react";
 
 import imgDachgeschoss from "@/assets/ref-dachgeschoss.jpg";
-import imgBad from "@/assets/ref-bad.jpg";
 import imgBuero from "@/assets/ref-buero.jpg";
-import imgAltbau from "@/assets/ref-altbau.jpg";
 import imgPraxis from "@/assets/ref-praxis.jpg";
 import imgLaden from "@/assets/ref-laden.jpg";
 
@@ -18,22 +16,10 @@ const projects = [
     image: imgDachgeschoss,
   },
   {
-    title: "Badezimmer-Sanierung Privathaushalt",
-    category: "Fliesenlegen",
-    desc: "Komplettsanierung eines Familienbads inklusive Abdichtung, großformatiger Fliesen und bodengleicher Dusche.",
-    image: imgBad,
-  },
-  {
     title: "Büroräume Gera Zentrum",
     category: "Fußbodenverlegung",
     desc: "Verlegung von 200m² Designvinyl in modernen Büroräumen inkl. Sockelleisten und Übergangsprofilen.",
     image: imgBuero,
-  },
-  {
-    title: "Wohnungsrenovierung Altbau",
-    category: "Wände streichen",
-    desc: "Farbgestaltung und Anstrich einer 3-Zimmer-Altbauwohnung mit hochwertigen Innenfarben.",
-    image: imgAltbau,
   },
   {
     title: "Praxisräume Deckengestaltung",
@@ -63,7 +49,7 @@ const Referenzen = () => {
 
       <section className="py-20">
         <div className="container">
-          <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+          <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-2">
             {projects.map((p, i) => (
               <motion.div
                 key={p.title}

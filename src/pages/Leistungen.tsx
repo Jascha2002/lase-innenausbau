@@ -1,11 +1,9 @@
 import { motion } from "framer-motion";
-import { Layers, ArrowDown, Hammer, PaintBucket, Grid3X3 } from "lucide-react";
+import { Layers, ArrowDown, Hammer } from "lucide-react";
 
 import imgFussboden from "@/assets/leistungen-fussboden.jpg";
 import imgDecken from "@/assets/leistungen-decken.jpg";
 import imgTrockenbau from "@/assets/leistungen-trockenbau.jpg";
-import imgStreichen from "@/assets/leistungen-streichen.jpg";
-import imgFliesen from "@/assets/leistungen-fliesen.jpg";
 
 const services = [
   {
@@ -26,18 +24,6 @@ const services = [
     desc: "Raumteiler, Vorwandinstallationen, Dachgeschossausbau – Trockenbau ist unser Kerngeschäft. Schnell, sauber und vielseitig einsetzbar für jeden Grundriss.",
     image: imgTrockenbau,
   },
-  {
-    icon: PaintBucket,
-    title: "Wände streichen",
-    desc: "Von der einfachen Renovierung bis zur kreativen Farbgestaltung. Wir streichen Ihre Wände professionell mit hochwertigen Farben und sorgfältiger Vorbereitung.",
-    image: imgStreichen,
-  },
-  {
-    icon: Grid3X3,
-    title: "Fliesenlegen",
-    desc: "Fliesen für Bad, Küche, Flur oder Terrasse. Wir verlegen Wand- und Bodenfliesen in allen Formaten – inklusive Abdichtung und Fugentechnik.",
-    image: imgFliesen,
-  },
 ];
 
 const Leistungen = () => {
@@ -48,6 +34,7 @@ const Leistungen = () => {
           <h1 className="font-display text-5xl sm:text-6xl">Unsere Leistungen</h1>
           <p className="mt-4 max-w-xl text-primary-foreground/70">
             Professioneller Innenausbau aus einer Hand – von der Planung bis zur Fertigstellung.
+            Sie haben ein anderes Vorhaben? Fragen Sie uns gerne an – wir prüfen, ob wir auch Ihr Projekt umsetzen können.
           </p>
         </div>
       </section>
