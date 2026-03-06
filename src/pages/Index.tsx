@@ -51,17 +51,21 @@ const Index = () => {
 
             {/* Animated Logo */}
             <motion.div
-              initial={{ opacity: 0, scale: 0.7, rotate: -10 }}
+              initial={{ opacity: 0, scale: 0.5, rotate: -15 }}
               animate={{ opacity: 1, scale: 1, rotate: 0 }}
-              transition={{ duration: 1, delay: 0.3, type: "spring", stiffness: 80 }}
+              transition={{ duration: 1.2, delay: 0.3, type: "spring", stiffness: 100, damping: 10 }}
               className="hidden lg:block"
             >
               <motion.img
                 src={logoImg}
                 alt="LA.SE Innenausbau Logo"
                 className="w-72 xl:w-96 drop-shadow-2xl"
-                animate={{ y: [0, -10, 0] }}
-                transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
+                animate={{
+                  y: [0, -15, 0, -8, 0],
+                  rotate: [0, 2, -2, 1, 0],
+                  scale: [1, 1.03, 0.98, 1.01, 1],
+                }}
+                transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
               />
             </motion.div>
           </div>
