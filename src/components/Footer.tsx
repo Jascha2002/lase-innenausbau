@@ -8,7 +8,7 @@ const Footer = () => {
         <div className="grid gap-8 md:grid-cols-3">
           {/* Company */}
           <div>
-            <img src="/images/logo.png" alt="LA.SE Innenausbau" className="mb-4 h-12 w-auto" />
+            <img src="/images/logo-v2.png" alt="LA.SE Innenausbau" className="mb-4 h-12 w-auto" />
             <p className="text-sm text-primary-foreground/70">
               Ihr Partner für professionellen Innenausbau in Gera und Umgebung.
               Qualität, Zuverlässigkeit und Handwerkskunst.
