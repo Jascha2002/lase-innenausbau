@@ -2,13 +2,14 @@ import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { Phone, MapPin, Award, Clock, Layers, ArrowDown, Hammer } from "lucide-react";
+import { Phone, MapPin, Award, Clock, Layers, ArrowDown, Hammer, DoorOpen } from "lucide-react";
 import logoImg from "@/assets/logo-v2.png";
 
 const services = [
   { icon: Layers, title: "Fußbodenverlegung", desc: "Parkett, Laminat, Vinyl & mehr" },
   { icon: ArrowDown, title: "Decken abhängen", desc: "Akustik- & Designdecken" },
   { icon: Hammer, title: "Trockenbau", desc: "Wände, Verkleidungen & Raumteiler" },
+  { icon: DoorOpen, title: "Innentüren & Fenster", desc: "Fachgerechter Einbau & Montage" },
 ];
 
 const Index = () => {
