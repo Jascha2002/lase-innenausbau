@@ -2,13 +2,14 @@ import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { Phone, MapPin, Award, Clock, Layers, ArrowDown, Hammer } from "lucide-react";
+import { Phone, MapPin, Award, Clock, Layers, ArrowDown, Hammer, DoorOpen } from "lucide-react";
 import logoImg from "@/assets/logo-v2.png";
 
 const services = [
   { icon: Layers, title: "Fußbodenverlegung", desc: "Parkett, Laminat, Vinyl & mehr" },
   { icon: ArrowDown, title: "Decken abhängen", desc: "Akustik- & Designdecken" },
   { icon: Hammer, title: "Trockenbau", desc: "Wände, Verkleidungen & Raumteiler" },
+  { icon: DoorOpen, title: "Innentüren & Fenster", desc: "Fachgerechter Einbau & Montage" },
 ];
 
 const Index = () => {
@@ -54,7 +55,7 @@ const Index = () => {
               initial={{ opacity: 0, scale: 0.5, rotate: -15 }}
               animate={{ opacity: 1, scale: 1, rotate: 0 }}
               transition={{ duration: 1.2, delay: 0.3, type: "spring", stiffness: 100, damping: 10 }}
-              className="hidden lg:block"
+              className="hidden lg:block relative"
             >
               <motion.img
                 src={logoImg}
@@ -66,6 +67,23 @@ const Index = () => {
                   scale: [1, 1.03, 0.98, 1.01, 1],
                 }}
                 transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
+              />
+              {/* Shine / glint overlay */}
+              <motion.div
+                className="absolute inset-0 pointer-events-none"
+                style={{
+                  background: "linear-gradient(105deg, transparent 40%, rgba(255,255,255,0.4) 45%, rgba(255,255,255,0.6) 50%, rgba(255,255,255,0.4) 55%, transparent 60%)",
+                  backgroundSize: "200% 100%",
+                }}
+                animate={{
+                  backgroundPosition: ["200% 0", "-200% 0"],
+                }}
+                transition={{
+                  duration: 3,
+                  repeat: Infinity,
+                  repeatDelay: 4,
+                  ease: "easeInOut",
+                }}
               />
             </motion.div>
           </div>
