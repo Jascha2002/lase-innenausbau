@@ -1,9 +1,10 @@
 import { motion } from "framer-motion";
-import { Layers, ArrowDown, Hammer } from "lucide-react";
+import { Layers, ArrowDown, Hammer, DoorOpen } from "lucide-react";
 
 import imgFussboden from "@/assets/leistungen-fussboden.jpg";
 import imgDecken from "@/assets/leistungen-decken.jpg";
 import imgTrockenbau from "@/assets/leistungen-trockenbau.jpg";
+import imgTuerenFenster from "@/assets/leistungen-tueren-fenster.jpg";
 
 const services = [
   {
@@ -23,6 +24,12 @@ const services = [
     title: "Trockenbau",
     desc: "Raumteiler, Vorwandinstallationen, Dachgeschossausbau – Trockenbau ist unser Kerngeschäft. Schnell, sauber und vielseitig einsetzbar für jeden Grundriss.",
     image: imgTrockenbau,
+  },
+  {
+    icon: DoorOpen,
+    title: "Innentüren & Fenster Einbau",
+    desc: "Fachgerechter Einbau von Innentüren und Fenstern – ob Zimmertüren, Glastüren oder Schiebetüren. Wir sorgen für passgenaue Montage, saubere Anschlüsse und ein stimmiges Gesamtbild in Ihren Räumen.",
+    image: imgTuerenFenster,
   },
 ];
 
