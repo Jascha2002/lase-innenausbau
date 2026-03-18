@@ -27,8 +27,8 @@ const Index = () => {
               className="max-w-2xl"
             >
               <h1 className="font-display text-5xl leading-tight sm:text-7xl">
-                Innenausbau<br />
-                <span className="text-accent">mit Leidenschaft</span>
+                Innenausbau & Trockenbau in Gera<br />
+                <span className="text-accent">– professionell & zuverlässig</span>
               </h1>
               <p className="mt-6 text-lg text-primary-foreground/70">
                 LA.SE Innenausbau – Ihr zuverlässiger Handwerkspartner in Gera.
