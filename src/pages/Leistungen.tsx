@@ -64,7 +64,7 @@ const Leistungen = () => {
               <div className="shrink-0 overflow-hidden rounded-2xl md:w-1/2">
                 <img
                   src={s.image}
-                  alt={s.title}
+                  alt={s.alt}
                   className="aspect-video w-full object-cover transition-transform duration-500 hover:scale-105"
                   loading="lazy"
                 />

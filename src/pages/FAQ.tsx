@@ -3,27 +3,27 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/
 const faqs = [
   {
     q: "Welche Leistungen bieten Sie an?",
-    a: "Unsere Kernleistungen umfassen Fußbodenverlegung, Decken abhängen und Trockenbau. Darüber hinaus prüfen wir gerne, ob wir auch weitere Innenausbau-Projekte für Sie umsetzen können – fragen Sie uns einfach an.",
+    a: "Unsere Kernleistungen in Gera umfassen Fußbodenverlegung, Decken abhängen, Trockenbau sowie den Einbau von Innentüren und Fenstern. Darüber hinaus prüfen wir gerne, ob wir auch weitere Innenausbau-Projekte für Sie umsetzen können – fragen Sie uns einfach an.",
   },
   {
     q: "In welchem Gebiet sind Sie tätig?",
-    a: "Unser Hauptgebiet ist Gera und Umgebung in Thüringen. Je nach Projektgröße sind wir auch überregional verfügbar.",
+    a: "Unser Hauptgebiet ist Gera und Umgebung in Thüringen – dazu zählen auch Greiz, Zeulenroda, Altenburg und die gesamte Region Ostthüringen. Je nach Projektgröße sind wir auch überregional verfügbar.",
   },
   {
     q: "Wie läuft eine Zusammenarbeit ab?",
-    a: "Nach Ihrer Kontaktaufnahme vereinbaren wir einen Vor-Ort-Termin, erstellen ein unverbindliches Angebot und starten nach Auftragserteilung zeitnah mit der Ausführung.",
+    a: "Nach Ihrer Kontaktaufnahme vereinbaren wir einen Vor-Ort-Termin in Gera oder Umgebung, erstellen ein unverbindliches Angebot und starten nach Auftragserteilung zeitnah mit der Ausführung.",
   },
   {
     q: "Erstellen Sie kostenlose Kostenvoranschläge?",
-    a: "Ja, wir erstellen Ihnen gerne einen unverbindlichen Kostenvoranschlag nach einer Besichtigung vor Ort.",
+    a: "Ja, wir erstellen Ihnen gerne einen unverbindlichen Kostenvoranschlag nach einer Besichtigung vor Ort in Gera und Umgebung.",
   },
   {
     q: "Wie lange dauert ein typisches Projekt?",
-    a: "Die Dauer hängt vom Umfang ab. Ein einzelnes Zimmer ist oft in 1-3 Tagen fertig, größere Projekte besprechen wir im Detail beim Vor-Ort-Termin.",
+    a: "Die Dauer hängt vom Umfang ab. Ein einzelnes Zimmer ist oft in 1-3 Tagen fertig, größere Projekte in Gera besprechen wir im Detail beim Vor-Ort-Termin.",
   },
   {
     q: "Arbeiten Sie auch am Wochenende?",
-    a: "In Ausnahmefällen und nach Absprache sind auch Wochenendarbeiten möglich. Sprechen Sie uns einfach an.",
+    a: "In Ausnahmefällen und nach Absprache sind auch Wochenendarbeiten in Gera und Umgebung möglich. Sprechen Sie uns einfach an.",
   },
   {
     q: "Welche Materialien verwenden Sie?",
@@ -31,7 +31,7 @@ const faqs = [
   },
   {
     q: "Kann ich auch Leistungen anfragen, die nicht auf der Website stehen?",
-    a: "Selbstverständlich! Senden Sie uns einfach Ihre Anfrage über das Kontaktformular. Wir prüfen, ob eine Umsetzung durch unser Unternehmen möglich ist und melden uns bei Ihnen.",
+    a: "Selbstverständlich! Senden Sie uns einfach Ihre Anfrage über das Kontaktformular. Wir prüfen, ob eine Umsetzung durch unser Unternehmen in Gera möglich ist und melden uns bei Ihnen.",
   },
 ];
 
