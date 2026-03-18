@@ -38,7 +38,7 @@ const Leistungen = () => {
     <>
       <section className="bg-primary py-20 text-primary-foreground">
         <div className="container">
-          <h1 className="font-display text-5xl sm:text-6xl">Unsere Leistungen</h1>
+          <h1 className="font-display text-5xl sm:text-6xl">Innenausbau Leistungen in Gera – Trockenbau, Bodenbelag & mehr</h1>
           <p className="mt-4 max-w-xl text-primary-foreground/70">
             Professioneller Innenausbau aus einer Hand – von der Planung bis zur Fertigstellung.
             Sie haben ein anderes Vorhaben? Fragen Sie uns gerne an – wir prüfen, ob wir auch Ihr Projekt umsetzen können.
