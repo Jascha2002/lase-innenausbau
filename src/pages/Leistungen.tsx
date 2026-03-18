@@ -10,24 +10,28 @@ const services = [
   {
     icon: Layers,
     title: "Fußbodenverlegung",
+    alt: "Fußbodenverlegung Gera – Laminat, Parkett & Vinyl verlegen",
     desc: "Ob Parkett, Laminat, Vinyl oder Designbelag – wir verlegen Ihren Boden fachgerecht und passgenau. Inklusive Untergrundvorbereitung, Dämmung und sauberer Abschlüsse.",
     image: imgFussboden,
   },
   {
     icon: ArrowDown,
     title: "Decken abhängen",
+    alt: "Decken abhängen Gera – Akustik- und Gipskartondecken",
     desc: "Abgehängte Decken für bessere Raumakustik, integrierte Beleuchtung oder einfach ein moderneres Erscheinungsbild. Wir arbeiten mit Gipskarton- und Akustikdeckensystemen.",
     image: imgDecken,
   },
   {
     icon: Hammer,
     title: "Trockenbau",
+    alt: "Trockenbau Gera – Wände, Raumteiler & Verkleidungen",
     desc: "Raumteiler, Vorwandinstallationen, Dachgeschossausbau – Trockenbau ist unser Kerngeschäft. Schnell, sauber und vielseitig einsetzbar für jeden Grundriss.",
     image: imgTrockenbau,
   },
   {
     icon: DoorOpen,
     title: "Innentüren & Fenster Einbau",
+    alt: "Innentüren einbauen Gera – fachgerechte Montage",
     desc: "Fachgerechter Einbau von Innentüren und Fenstern – ob Zimmertüren, Glastüren oder Schiebetüren. Wir sorgen für passgenaue Montage, saubere Anschlüsse und ein stimmiges Gesamtbild in Ihren Räumen.",
     image: imgTuerenFenster,
   },
