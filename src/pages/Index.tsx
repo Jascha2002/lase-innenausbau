@@ -65,12 +65,18 @@ const Index = () => {
                   backgroundSize: "200% 100%",
                 }}
                 animate={{
-                  backgroundPosition: ["200% 0", "-200% 0"],
+                  backgroundPosition: [
+                    "200% 0",  // Start
+                    "-200% 0", // 1. Schimmer fertig (0.6s)
+                    "200% 0",  // Reset (0.6s)
+                    "-200% 0", // 2. Schimmer fertig (1.2s)
+                    "-200% 0", // Pause (3s)
+                  ],
                 }}
                 transition={{
-                  duration: 3,
+                  duration: 4.2,
+                  times: [0, 0.14, 0.15, 0.29, 1],
                   repeat: Infinity,
-                  repeatDelay: 4,
                   ease: "easeInOut",
                 }}
               />
